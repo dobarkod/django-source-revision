@@ -36,5 +36,5 @@ env:
   - TOX_ENV=py35-django19
 
 script:
-  - pip install tox mock
+  - pip install tox
   - tox -e $TOX_ENV
