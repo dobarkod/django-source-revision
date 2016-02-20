@@ -1,5 +1,12 @@
-from subprocess import check_output, CalledProcessError
+from subprocess import CalledProcessError
 from django.conf import settings
+
+try:
+    from subprocess import check_output
+except ImportError:
+    from subprocess import Popen, PIPE
+    def check_output(cmd):
+        return Popen(cmd, stdout=PIPE).communicate()[0]
 
 __all__ = ['get_revision']
 
