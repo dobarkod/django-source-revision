@@ -104,6 +104,10 @@ specified. The default commands are:
         'hg id -i' # for mercurial
     ]
 
+If you add support for additional VCS systems (such as subversion, darcs
+or others), please consider contributing it to this project (see below for
+guidelines for contributors).
+
 ## Testing
 
 To run tests, use the `tox` command (https://pypi.python.org/pypi/tox)
